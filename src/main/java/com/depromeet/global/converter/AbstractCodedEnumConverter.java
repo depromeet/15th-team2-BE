@@ -23,7 +23,7 @@ public abstract class AbstractCodedEnumConverter<T extends Enum<T> & CodedEnum<E
             return null;
         }
         return Arrays.stream(clazz.getEnumConstants())
-                .filter(e -> e.getClass().equals(dbData))
+                .filter(e -> e.getValue().equals(dbData))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + dbData));
     }

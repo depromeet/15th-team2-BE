@@ -32,6 +32,9 @@ public class MemberEntity {
     @Column(name = "role")
     private MemberRole role;
 
+    @Column
+    private String refreshToken;
+
     @Builder
     private MemberEntity(Long id, String name, String email, String password, MemberRole role) {
         this.id = id;

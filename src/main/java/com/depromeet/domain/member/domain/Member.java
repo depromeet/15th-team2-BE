@@ -12,6 +12,7 @@ public class Member {
     private String email;
     private String password;
     private MemberRole role;
+    private String refreshToken;
 
     @Builder
     public Member(Long id, String name, String email, String password, MemberRole role) {
@@ -44,6 +45,12 @@ public class Member {
     public void encodePassword(String password) {
         if(password != null) {
             this.password = password;
+        }
+    }
+
+    public void updateRefreshToken(String refreshToken) {
+        if(refreshToken != null) {
+            this.refreshToken = refreshToken;
         }
     }
 }

@@ -12,4 +12,6 @@ public interface MemberService {
     Member findById(Long id);
 
     Member findByEmail(String email);
+
+    boolean matchPassword(String rawPassword, String encodedPassword);
 }

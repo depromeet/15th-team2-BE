@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: actuator
+
+jwt:
+  access-token-secret: ${ACCESS_TOKEN_SECRET}
+  refresh-token-secret: ${REFRESH_TOKEN_SECRET}
+  access-token-expiration-time: ${ACCESS_TOKEN_EXP}
+  refresh-token-expiration-time: ${REFRESH_TOKEN_EXP}
+  issuer: ${ISSUER}
